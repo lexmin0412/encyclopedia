@@ -41,6 +41,11 @@
 
 ## 工具
 
+### 开发工具
+
+- [VSCode](https://github.com/microsoft/vscode) - 一个轻量但功能强大的源代码编辑器
+- [Atom](https://github.com/atom/atom) - 一款由 Github 开发的代码编辑器
+
 ### 构建工具
 
 - [Webpack](https://github.com/webpack/webpack) - 一个用于现代 JavaScript 应用程序的 静态模块打包工具
