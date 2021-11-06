@@ -12,6 +12,7 @@
 - [Taro](https://github.com/nervjs/taro) - 开放式跨端跨框架解决方案
 - [UniApp](https://gitee.com/dcloud/uni-app) - 一个使用 Vue.js 开发所有前端应用的框架
 - [SolidJS](https://github.com/solidjs/solid) - 一个声明式、高效且灵活用于构建用户界面的 JavaScript 库
+- [Remax](https://github.com/remaxjs/remax) - 使用真正的 React 构建跨平台小程序
 
 ## Node.js 框架
 
