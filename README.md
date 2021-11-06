@@ -81,3 +81,13 @@
 
 - [Jest](https://github.com/facebook/jest) - 一个令人愉快的 JavaScript 测试框架
 - [Mocha](https://github.com/mochajs/mocha) - 一个功能丰富的javascript测试框架
+
+## UI自动化
+
+- [PlayWright](https://github.com/microsoft/playwright) - 一个可以自动化操作 Chromium, Firefox 和 WebKit 的 node 库
+
+## 文档编写
+
+- [Docsify](https://github.com/docsifyjs/docsify) - 一个神奇的文档网站生成器
+- [VuePress](https://github.com/vuejs/vuepress) - 一个极简的 Vue 驱动的静态网站生成器
+- [Docusaurus](https://github.com/facebook/docusaurus) - 基于 React 帮助您在极短时间内搭建优美的文档网站
