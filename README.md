@@ -72,3 +72,7 @@
 ### API管理
 
 - [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
+
+### 图表工具
+
+- [Mermaid](https://github.com/mermaid-js/mermaid) - 一个基于 Javascript 的图表绘制工具
