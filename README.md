@@ -30,7 +30,7 @@
 - [Taroify](https://github.com/mallfoundry/taroify) - 移动端组件库 Vant 的 Taro 版本
 - [Vant](https://github.com/youzan/vant) - 轻量、可靠的移动端 Vue 组件库
 - [NutUI](https://github.com/jdf2e/nutui) - 京东风格的轻量级移动端 Vue2、Vue3 组件库（支持多端小程序开发）
-- [Aut Design Mobile](https://github.com/ant-design/ant-design-mobile) - Ant Design 的移动端版本
+- [Ant Design Mobile](https://github.com/ant-design/ant-design-mobile) - Ant Design 的移动端版本
 
 ### PC端
 
