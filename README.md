@@ -56,7 +56,9 @@
 
 ### 依赖管理
 
-- [pnpm](https://github.com/pnpm/pnpm) - 快速的，节省磁盘空间的包管理工具
+- [NPM](https://github.com/npm/cli) - JavaScript 包管理工具
+- [YARN](https://github.com/yarnpkg/yarn) - 快速、可靠、安全的依赖管理工具
+- [PNPM](https://github.com/pnpm/pnpm) - 快速的，节省磁盘空间的包管理工具
 
 ### 开发调试
 
