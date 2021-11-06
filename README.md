@@ -68,7 +68,6 @@
 - [StyleLint](https://github.com/stylelint/stylelint) - 一个强大的，现代的代码检查工具，可以帮助您避免错误并在您的样式中强制执行约定
 - [MarkdownLint](https://github.com/DavidAnson/markdownlint) - 一个 Node.js 风格的 Markdown/CommonMark 文件检查和校验工具
 - [CommitLint](https://github.com/conventional-changelog/commitlint) - Git 提交规范检查工具
-- [EditorConfig](https://github.com/editorconfig/editorconfig) - 帮助开发人员在不同的编辑器和 IDE 之间定义和维护一致的编码样式
 
 ### API管理
 
