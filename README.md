@@ -81,7 +81,7 @@
 ### 单元测试
 
 - [Jest](https://github.com/facebook/jest) - 一个令人愉快的 JavaScript 测试框架
-- [Mocha](https://github.com/mochajs/mocha) - 一个功能丰富的javascript测试框架
+- [Mocha](https://github.com/mochajs/mocha) - 一个功能丰富的 Javascript 测试框架
 
 ## UI自动化
 
