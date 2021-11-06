@@ -11,6 +11,7 @@
 - [Svelte](https://github.com/sveltejs/svelte) - Cybernetically enhanced web apps
 - [Taro](https://github.com/nervjs/taro) - 开放式跨端跨框架解决方案
 - [UniApp](https://gitee.com/dcloud/uni-app) - 一个使用 Vue.js 开发所有前端应用的框架
+- [SolidJS](https://github.com/solidjs/solid) - 一个声明式、高效且灵活用于构建用户界面的 JavaScript 库
 
 ## Node.js 框架
 
@@ -36,6 +37,11 @@
 
 - [Ant Design](https://github.com/ant-design/ant-design) - 一套企业级 UI 设计语言和 React 组件库
 - [Element Plus](https://github.com/element-plus/element-plus) - 一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库
+- [MaterialUI](https://github.com/mui-org/material-ui) - React UI库
+
+## 工具
+
+- [VConsole](https://github.com/Tencent/vConsole) - 一个轻量、可拓展、针对手机网页的前端开发者调试面板
 
 
 
