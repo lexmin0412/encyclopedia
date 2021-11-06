@@ -41,8 +41,20 @@
 
 ## 工具
 
+### 构建工具
+
+- [Webpack](https://github.com/webpack/webpack) - 一个用于现代 JavaScript 应用程序的 静态模块打包工具
+- [Rollup](https://github.com/rollup/rollup) - 一个 JavaScript 模块打包器
+- [Vite](https://github.com/vitejs/vite) - 下一代前端开发与构建工具
+
+### 依赖管理
+
+- [pnpm](https://github.com/pnpm/pnpm) - 快速的，节省磁盘空间的包管理工具
+
+### 开发调试
+
 - [VConsole](https://github.com/Tencent/vConsole) - 一个轻量、可拓展、针对手机网页的前端开发者调试面板
 
+### API管理
 
-
-
+- [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
