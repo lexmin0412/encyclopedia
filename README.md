@@ -51,6 +51,7 @@
 - [Webpack](https://github.com/webpack/webpack) - 一个用于现代 JavaScript 应用程序的 静态模块打包工具
 - [Rollup](https://github.com/rollup/rollup) - 一个 JavaScript 模块打包器
 - [Vite](https://github.com/vitejs/vite) - 下一代前端开发与构建工具
+- [ESBuld](https://github.com/evanw/esbuild) - 极速 JavaScript 打包工具
 
 ### 依赖管理
 
