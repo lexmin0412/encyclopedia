@@ -76,3 +76,8 @@
 ### 图表工具
 
 - [Mermaid](https://github.com/mermaid-js/mermaid) - 一个基于 Javascript 的图表绘制工具
+
+### 单元测试
+
+- [Jest](https://github.com/facebook/jest) - 一个令人愉快的 JavaScript 测试框架
+- [Mocha](https://github.com/mochajs/mocha) - 一个功能丰富的javascript测试框架
