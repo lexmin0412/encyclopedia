@@ -79,6 +79,7 @@
 ### 图表工具
 
 - [Mermaid](https://github.com/mermaid-js/mermaid) - 一个基于 Javascript 的图表绘制工具
+- [LuckySheet](https://github.com/mengshukeji/Luckysheet) - 一款纯前端类似excel的在线表格，功能强大、配置简单、完全开源
 
 ### 单元测试
 
