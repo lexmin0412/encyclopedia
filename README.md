@@ -101,6 +101,10 @@
 
 - [Husky](https://github.com/typicode/husky) - Git Hooks 工具
 
+### 前端智能化
+
+- [Picasso](https://github.com/wuba/Picasso) - Sketch设计稿智能解析平台
+
 ## 更多语言
 
 - [Rust](https://github.com/rust-lang/rust) - 一门赋予每个人构建可靠且高效软件能力的语言
