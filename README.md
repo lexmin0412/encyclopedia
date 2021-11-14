@@ -75,6 +75,10 @@
 - [CommitLint](https://github.com/conventional-changelog/commitlint) - Git 提交规范检查工具
 - [SonarJS](https://github.com/SonarSource/SonarJS) - JavaScript/TypeScript 静态代码分析工具
 
+### 命令行工具
+
+- [Chalk](https://github.com/chalk/chalk) - 终端字符串样式美化工具
+
 ### API管理
 
 - [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
