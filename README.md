@@ -72,6 +72,7 @@
 - [StyleLint](https://github.com/stylelint/stylelint) - 一个强大的，现代的代码检查工具，可以帮助您避免错误并在您的样式中强制执行约定
 - [MarkdownLint](https://github.com/DavidAnson/markdownlint) - 一个 Node.js 风格的 Markdown/CommonMark 文件检查和校验工具
 - [CommitLint](https://github.com/conventional-changelog/commitlint) - Git 提交规范检查工具
+- [SonarJS](https://github.com/SonarSource/SonarJS) - JavaScript/TypeScript 静态代码分析工具
 
 ### API管理
 
