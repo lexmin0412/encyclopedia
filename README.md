@@ -4,7 +4,7 @@
 > 
 > 只收集觉得好用的，不喜欢的不包括，如 angular
 
-## 前端框架生态
+## 前端框架及其生态
 
 - [React](https://github.com/facebook/react) - 用于构建用户界面的 JavaScript 库
   - [MaterialUI](https://github.com/mui-org/material-ui) - Material Design 风格的 React UI库
@@ -22,6 +22,7 @@
   - [PIUI](https://github.com/sadais-org/piui) - 基于uniapp的高质量UI开源组件库
 - [SolidJS](https://github.com/solidjs/solid) - 一个声明式、高效且灵活用于构建用户界面的 JavaScript 库
 - [Remax](https://github.com/remaxjs/remax) - 使用真正的 React 构建跨平台小程序
+- [Flutter](https://github.com/flutter/flutter) - Google 推出并开源的移动应用开发框架，主打跨平台、高保真、高性能
 
 ## Node.js 框架
 
