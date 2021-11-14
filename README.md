@@ -94,7 +94,7 @@
 
 - [Husky](https://github.com/typicode/husky) - Git Hooks 工具
 
-### 更多语言
+## 更多语言
 
 - [Rust](https://github.com/rust-lang/rust) - 一门赋予每个人构建可靠且高效软件能力的语言
 - [Go](https://github.com/golang/go) - 一门可以提高程序员的工作效率的编程语言
