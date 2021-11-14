@@ -13,6 +13,7 @@
 - [Vue](https://github.com/vuejs/vue) - 渐进式 JavaScript 框架
   - [Element Plus](https://github.com/element-plus/element-plus) - 一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库 
   - [Vant](https://github.com/youzan/vant) - 轻量、可靠的移动端 Vue 组件库
+  - [Varlet](https://github.com/haoziqaq/varlet) - 基于 Vue3 开发的 Material 风格移动端组件库
   - [NutUI](https://github.com/jdf2e/nutui) - 京东风格的轻量级移动端 Vue2、Vue3 组件库（支持多端小程序开发）
 - [Svelte](https://github.com/sveltejs/svelte) - Cybernetically enhanced web apps
 - [Taro](https://github.com/nervjs/taro) - 开放式跨端跨框架解决方案
