@@ -54,6 +54,11 @@
 - [YARN](https://github.com/yarnpkg/yarn) - 快速、可靠、安全的依赖管理工具
 - [PNPM](https://github.com/pnpm/pnpm) - 快速的，节省磁盘空间的包管理工具
 
+### 提效工具
+
+- [NVM](https://github.com/nvm-sh/nvm) - Node.js 版本管理工具
+- [NRM](https://github.com/Pana/nrm) - NPM 源切换工具
+
 ### 开发调试
 
 - [VConsole](https://github.com/Tencent/vConsole) - 一个轻量、可拓展、针对手机网页的前端开发者调试面板
