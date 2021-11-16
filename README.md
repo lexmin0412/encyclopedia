@@ -80,6 +80,10 @@
 
 - [Chalk](https://github.com/chalk/chalk) - 终端字符串样式美化工具
 
+### 模版生成工具
+
+- [Handlerbars.js](https://github.com/handlebars-lang/handlebars.js) - 轻量的语义化模板
+
 ### API管理
 
 - [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
