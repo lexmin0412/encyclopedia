@@ -28,7 +28,7 @@
 - [QianKun](https://github.com/umijs/qiankun) - 可能是你见过最完善的微前端解决方案
 - [Flutter](https://github.com/flutter/flutter) - Google 推出并开源的移动应用开发框架，主打跨平台、高保真、高性能
 
-## Node.js 框架
+## Web 框架
 
 - [Express](https://github.com/expressjs/express) - 基于 Node.js 平台，快速、开放、极简的 Web 开发框架
 - [Koa](https://github.com/koajs/koa) - 基于 Node.js 平台的下一代 web 开发框架
@@ -37,6 +37,7 @@
 - [Next.js](https://github.com/vercel/next.js) - 用于生产环境的 React 框架
 - [Nuxt.js](https://github.com/nuxt/nuxt.js) - 基于 Vue.js 的通用应用框架
 - [Nest.js](https://github.com/nestjs/nest) - 用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架
+- [Remix](https://github.com/remix-run/remix) - 全栈 web 框架
 
 ## 工具
 
