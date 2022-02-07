@@ -92,8 +92,9 @@
 
 - [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
 
-### 图表工具
+### 图表/可视化
 
+- [AntV/F2](https://github.com/antvis/F2) - 开箱即用的移动端可视化解决方案
 - [Mermaid](https://github.com/mermaid-js/mermaid) - 一个基于 Javascript 的图表绘制工具
 - [LuckySheet](https://github.com/mengshukeji/Luckysheet) - 一款纯前端类似excel的在线表格，功能强大、配置简单、完全开源
 
