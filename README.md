@@ -65,8 +65,9 @@
 
 - [NVM](https://github.com/nvm-sh/nvm) - Node.js 版本管理工具
 - [NRM](https://github.com/Pana/nrm) - NPM 源切换工具
-- [NPKill](https://github.com/voidcosmos/npkill) - 一个可以列出你的系统中所有 node_modules 及其体积，并可选择性清除的命令行工具
-- [QNM](https://github.com/ranyitz/qnm) - 一个实现类似于 `npm list` 功能但体验更好的命令行工具
+- [NPKill](https://github.com/voidcosmos/npkill) - 列出你的系统中所有 node_modules 及其体积，并可选择性清除的工具
+- [QNM](https://github.com/ranyitz/qnm) - 类似于 `npm list` 功能但体验更好的命令行工具
+- [NCU](https://github.com/raineorshine/npm-check-updates) - 查找 package.json 中所有依赖的最新版本
 
 ### 开发调试
 
