@@ -54,6 +54,7 @@
 - [Rollup](https://github.com/rollup/rollup) - 一个 JavaScript 模块打包器
 - [Vite](https://github.com/vitejs/vite) - 下一代前端开发与构建工具
 - [ESBuld](https://github.com/evanw/esbuild) - 极速 JavaScript 打包工具
+- [Rspack](https://github.com/web-infra-dev/rspack) - 基于 Rust 的高性能 Web 构建工具
 
 ### 依赖管理
 
@@ -116,6 +117,7 @@
 - [VuePress](https://github.com/vuejs/vuepress) - 一个极简的 Vue 驱动的静态网站生成器
 - [Docusaurus](https://github.com/facebook/docusaurus) - 基于 React 帮助您在极短时间内搭建优美的文档网站
 - [Dumi](https://github.com/umijs/dumi) - 为组件开发场景而生的文档工具
+- [Rspress](https://github.com/web-infra-dev/rspress) - 基于 Rspack 的静态站点生成器
 
 ### Git
 
