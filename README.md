@@ -64,6 +64,7 @@
 
 ### 提效工具
 
+- [FNM](https://github.com/Schniz/fnm) - 简单快速的 Node.js 版本管理工具，基于 Rust 构建
 - [NVM](https://github.com/nvm-sh/nvm) - Node.js 版本管理工具
 - [NRM](https://github.com/Pana/nrm) - NPM 源切换工具
 - [NPKill](https://github.com/voidcosmos/npkill) - 列出你的系统中所有 node_modules 及其体积，并可选择性清除的工具
