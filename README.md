@@ -1,134 +1,549 @@
-# Awesome Wheels
+# React 单页应用模板
 
-这里是笔者使用过的在开发体验、周边生态、覆盖场景等方面至少有一项强于其他同类框架，可以用于生产环境的轮子合集，如果你想从零开始创建一个前端项目，可以从这里找到所有你想要的。
+React 应用模板，用于个人项目的基座，免去每次初始化项目的繁琐过程，使用的框架/库包括 React、TypeScript、TailwindCSS、React Router、Ant Design、AHooks，依赖管理工具为 PNPM，构建工具为 Vite，具备 Jest 单测和 React Testing Library 组件测试能力，支持 Github Actions 部署，Github Pages 访问。
 
-> 备注：所有的轮子携带的链接统一为 git 仓库链接，优先级：github > gitee > coding.
-> 
-> 只收集觉得好用的，不喜欢的不包括，如 angular
+## 相关仓库
 
-## 前端框架及其生态
+| 仓库名         | 仓库地址                                     | 说明               |
+|----------------|----------------------------------------------|--------------------|
+| vue-template | https://github.com/lexmin0412/vue-template | vue 单页应用模板 |
 
-- [React](https://github.com/facebook/react) - 用于构建用户界面的 JavaScript 库
-  - [MaterialUI](https://github.com/mui-org/material-ui) - Material Design 风格的 React UI库
-  - [Ant Design](https://github.com/ant-design/ant-design) - 一套企业级 UI 设计语言和 React 组件库
-  - [Ant Design Mobile](https://github.com/ant-design/ant-design-mobile) - Ant Design 的移动端版本
-  - [React Use](https://github.com/streamich/react-use) - React Hooks 集合
-  - [ahooks](https://github.com/alibaba/hooks) - 一套高质量可靠的 React Hooks 库
-- [Vue](https://github.com/vuejs/vue-next) - 渐进式 JavaScript 框架
-  - [Element Plus](https://github.com/element-plus/element-plus) - 一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库 
-  - [Vant](https://github.com/youzan/vant) - 轻量、可靠的移动端 Vue 组件库
-  - [Varlet](https://github.com/haoziqaq/varlet) - 基于 Vue3 开发的 Material 风格移动端组件库
-  - [NutUI](https://github.com/jdf2e/nutui) - 京东风格的轻量级移动端 Vue2、Vue3 组件库（支持多端小程序开发）
-- [Svelte](https://github.com/sveltejs/svelte) - Cybernetically enhanced web apps
-- [Taro](https://github.com/nervjs/taro) - 开放式跨端跨框架解决方案
-  - [Taro Hooks](https://github.com/innocces/taro-hooks) - 为 Taro 而设计的 Hooks Library
-  - [Taroify](https://github.com/mallfoundry/taroify) - 移动端组件库 Vant 的 Taro 版本
-- [UniApp](https://gitee.com/dcloud/uni-app) - 一个使用 Vue.js 开发所有前端应用的框架
-  - [PIUI](https://github.com/sadais-org/piui) - 基于uniapp的高质量UI开源组件库
-- [SolidJS](https://github.com/solidjs/solid) - 一个声明式、高效且灵活用于构建用户界面的 JavaScript 库
-- [Remax](https://github.com/remaxjs/remax) - 使用真正的 React 构建跨平台小程序
-- [QianKun](https://github.com/umijs/qiankun) - 可能是你见过最完善的微前端解决方案
-- [Flutter](https://github.com/flutter/flutter) - Google 推出并开源的移动应用开发框架，主打跨平台、高保真、高性能
+## 技术栈
 
-## Web 框架
+- React V18
+- TypeScript V5
+- TailwindCSS V3
+- React Router V6
+- Ant Design V5
+- AHooks V3
+- PNPM V7
+- Vite V5
+- Jest V29
 
-- [Express](https://github.com/expressjs/express) - 基于 Node.js 平台，快速、开放、极简的 Web 开发框架
-- [Koa](https://github.com/koajs/koa) - 基于 Node.js 平台的下一代 web 开发框架
-- [Fastify](https://github.com/fastify/fastify) - 快速并且低开销的 web 框架，专为 Node.js 平台量身打造
-- [Egg.js](https://github.com/eggjs/egg) - 为企业级框架和应用而生
-- [Next.js](https://github.com/vercel/next.js) - 用于生产环境的 React 框架
-- [Nuxt.js](https://github.com/nuxt/nuxt.js) - 基于 Vue.js 的通用应用框架
-- [Nest.js](https://github.com/nestjs/nest) - 用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架
-- [Remix](https://github.com/remix-run/remix) - 全栈 web 框架
+## 搭建步骤
 
-## 工具
+此模板的搭建步骤如下，记录下来用于后续其他项目的开发。
 
-### 开发工具
+### 1. 初始化空间
 
-- [VSCode](https://github.com/microsoft/vscode) - 一个轻量但功能强大的源代码编辑器
-- [Atom](https://github.com/atom/atom) - 一款由 Github 开发的代码编辑器
+通过 vite 官方脚手架来初始化应用模板。
 
-### 构建工具
+```bash
+npx create-vite
+```
 
-- [Webpack](https://github.com/webpack/webpack) - 一个用于现代 JavaScript 应用程序的 静态模块打包工具
-- [Rollup](https://github.com/rollup/rollup) - 一个 JavaScript 模块打包器
-- [Vite](https://github.com/vitejs/vite) - 下一代前端开发与构建工具
-- [ESBuld](https://github.com/evanw/esbuild) - 极速 JavaScript 打包工具
-- [Rspack](https://github.com/web-infra-dev/rspack) - 基于 Rust 的高性能 Web 构建工具
+依次输入目录名、选择React、选择TypeScript，然后 `cd` 进入目录，通过 `code .` 打开目录。
 
-### 依赖管理
+### 2. 配置 npm 源
 
-- [NPM](https://github.com/npm/cli) - JavaScript 包管理工具
-- [YARN](https://github.com/yarnpkg/yarn) - 快速、可靠、安全的依赖管理工具
-- [PNPM](https://github.com/pnpm/pnpm) - 快速的，节省磁盘空间的包管理工具
+在根目录创建 `.npmrc` 文件，然后填入以下内容：
 
-### 提效工具
+```bash
+registry=https://registry.npmmirror.com/
+```
 
-- [FNM](https://github.com/Schniz/fnm) - 简单快速的 Node.js 版本管理工具，基于 Rust 构建
-- [NVM](https://github.com/nvm-sh/nvm) - Node.js 版本管理工具
-- [NRM](https://github.com/Pana/nrm) - NPM 源切换工具
-- [NPKill](https://github.com/voidcosmos/npkill) - 列出你的系统中所有 node_modules 及其体积，并可选择性清除的工具
-- [QNM](https://github.com/ranyitz/qnm) - 类似于 `npm list` 功能但体验更好的命令行工具
-- [NCU](https://github.com/raineorshine/npm-check-updates) - 查找 package.json 中所有依赖的最新版本
+### 3. 安装依赖
 
-### 开发调试
+使用 pnpm 安装依赖：
 
-- [VConsole](https://github.com/Tencent/vConsole) - 一个轻量、可拓展、针对手机网页的前端开发者调试面板
-- [Whistle](https://github.com/avwo/whistle) - 基于 Node 实现的跨平台抓包调试代理工具
+```bash
+pnpm install
+```
 
-### 编码规范
+### 4. 初始化 Git 配置
 
-- [ESLint](https://github.com/eslint/eslint) - 发现并修复 JavaScript 代码中的问题
-- [Prettier](https://github.com/prettier/prettier) - 一个“有态度”的代码格式化工具
-- [StyleLint](https://github.com/stylelint/stylelint) - 一个强大的，现代的代码检查工具，可以帮助您避免错误并在您的样式中强制执行约定
-- [MarkdownLint](https://github.com/DavidAnson/markdownlint) - 一个 Node.js 风格的 Markdown/CommonMark 文件检查和校验工具
-- [CommitLint](https://github.com/conventional-changelog/commitlint) - Git 提交规范检查工具
-- [SonarJS](https://github.com/SonarSource/SonarJS) - JavaScript/TypeScript 静态代码分析工具
+```
+git init
+git remote add origin git@github.com:lexmin0412/encyclopedia.git
+git add .
+git commit -m 'feat: init project'
+git push -u origin master
+```
 
-### 命令行工具
+### 5. TypeScript 配置调整
 
-- [Chalk](https://github.com/chalk/chalk) - 终端字符串样式美化工具
+配置文件调整:
+- 删除 tsconfig.node.json, 并去除 tsconfig.json 中对它的引用。—— 没必要
+- 将 compilerOptions.moduleResolution 选项值改为 `"Node"` —— 解析JSX
+- 添加 `allowSyntheticDefaultImports` 选项并设置为 true —— 确保 `import React from 'react'` 不会报错
 
-### 模版生成工具
+代码调整:
+- 去除 main.tsx 中对 App 文件引用的后缀：`import App from './App.tsx` => `import App from './App`
 
-- [Handlerbars.js](https://github.com/handlebars-lang/handlebars.js) - 轻量的语义化模板
 
-### API管理
+做完以上调整的 tsconfig.json 文件完整内容：
 
-- [YAPI](https://github.com/YMFE/yapi) - 高效、易用、功能强大的API管理平台
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
 
-### 图表/可视化
+    /* Bundler mode */
+    "moduleResolution": "Node",
+	 "allowSyntheticDefaultImports": true,
+	 "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
 
-- [AntV/F2](https://github.com/antvis/F2) - 开箱即用的移动端可视化解决方案
-- [Mermaid](https://github.com/mermaid-js/mermaid) - 一个基于 Javascript 的图表绘制工具
-- [LuckySheet](https://github.com/mengshukeji/Luckysheet) - 一款纯前端类似excel的在线表格，功能强大、配置简单、完全开源
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+}
+```
 
-### 单元测试
+### 6. 初始化 Github Actions 配置
 
-- [Jest](https://github.com/facebook/jest) - 一个令人愉快的 JavaScript 测试框架
-- [Mocha](https://github.com/mochajs/mocha) - 一个功能丰富的 Javascript 测试框架
+#### 6.1 修改 baseURL
 
-### UI自动化
+在 `vite.config.ts` 中添加如下配置：
 
-- [PlayWright](https://github.com/microsoft/playwright) - 一个可以自动化操作 Chromium, Firefox 和 WebKit 的 node 库
+```ts
+export default defineConfig({
+	base: '/encyclopedia/'
+})
+```
 
-### 文档工具
+#### 6.2 添加 Github Actions 配置文件
 
-- [Docsify](https://github.com/docsifyjs/docsify) - 一个神奇的文档网站生成器
-- [VuePress](https://github.com/vuejs/vuepress) - 一个极简的 Vue 驱动的静态网站生成器
-- [Docusaurus](https://github.com/facebook/docusaurus) - 基于 React 帮助您在极短时间内搭建优美的文档网站
-- [Dumi](https://github.com/umijs/dumi) - 为组件开发场景而生的文档工具
-- [Rspress](https://github.com/web-infra-dev/rspress) - 基于 Rspack 的静态站点生成器
+在根目录新建 .github/workflows 文件夹，并新建 `deploy.yml` 文件，填入如下内容：
 
-### Git
+```yaml
+name: Deploy Site to Pages
 
-- [Husky](https://github.com/typicode/husky) - Git Hooks 工具
+on:
+  push:
+    branches: [master]
 
-### 前端智能化
+  workflow_dispatch:
 
-- [Picasso](https://github.com/wuba/Picasso) - Sketch设计稿智能解析平台
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-## 更多语言
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
-- [Rust](https://github.com/rust-lang/rust) - 一门赋予每个人构建可靠且高效软件能力的语言
-- [Go](https://github.com/golang/go) - 一门可以提高程序员的工作效率的编程语言
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      - uses: pnpm/action-setup@v2 # pnpm is optional but recommended, you can also use npm / yarn
+        with:
+          version: 8
+          cache: pnpm
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build with Vite
+        run: |
+          pnpm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+```
+
+其中，`on.push.branches` 表示触发 action 的分支，选择初始化 Git 时使用的分支即可。
+
+#### 6.3 在 Github 上添加配置
+
+##### 获取 token
+
+进入 Github 点击右上角头像，进入 Settings => Developer Settings => Personal access tokens => Tokens(classic) => Generate new token，保存生成的 token。
+
+##### 设置 token
+
+进入 repo 页面，进入 Settings => Secrets and variables => Actions => New repository secret，命名为 ACCESS_TOKEN（配置文件中的 `secrets.` 后面的 key ），值为刚刚生成的 token。
+
+#### 6.4 推送代码，查看效果
+
+推送代码到 master，查看 repo 的 Actions 面板，等待 CI 流程执行完毕后，进入 Settings => Pages，稍等片刻（一两分钟）后，上方就会出现类似如下的文案：
+
+```txt
+Your site is live at https://lexmin0412.github.io/encyclopedia/
+```
+
+点击链接即可访问，后续只要推送代码，就会触发 action 重新部署。
+
+### 7. 设置为模板仓库
+
+进入 repo 页面，进入 Settings => General, 把 `Template repository` 一项勾上即可，再次切换到 repo 的默认页面，就会出现 `Use this template` 按钮，可以基于此创建一个新仓库。
+
+### 8. 添加 tailwindcss 支持
+
+#### 8.1 安装依赖
+
+```shell
+# 安装依赖
+pnpm add tailwindcss postcss autoprefixer -D
+# 初始化配置文件
+npx tailwindcss init -p
+```
+
+执行完成后，根目录会新增 `tailwind.config.js` 和 `postcss.config.js` 两个文件。
+
+#### 8.2 修改配置文件
+
+在 `tailwind.config.js` 中添加如下内容，使对应的文件能够被 tailwind 识别。
+
+```ts
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+}
+```
+
+#### 8.3 引入基础类
+
+在入口 css 文件的顶部添加如下内容，这是书写 `tailwind` class 的基础。
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+#### 8.4 添加 tailwind 类名，查看效果
+
+在 html 标签上添加一个类名，即可看到效果：
+
+```html
+<h1 className="bg-blue">
+  Hello world!
+</h1>
+```
+
+现在我们可以用 `tailwindcss` 来控制绝大部分的样式，`index.css` 和 `App.css` 文件中的样式可以全部删除掉了。
+
+### 9. 接入 react-router, 添加路由支持
+
+#### 9.1 安装依赖：
+
+```shell
+pnpm add react-router-dom
+```
+
+#### 9.2 创建、配置路由
+
+新建 `src/routers/index` 文件，添加如下内容:
+
+```tsx
+import {
+  createBrowserRouter,
+	Link
+} from "react-router-dom";
+import App from "../App";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/about",
+      element: (
+        <div>
+          <div>About</div>
+					<div>
+						<Link className="cursor-pointer" to='/' >回到首页</Link>
+					</div>
+        </div>
+      ),
+    },
+  ],
+  {
+    basename: "/encyclopedia",
+  }
+);
+
+export default router
+```
+
+用到的 API:
+
+- 使用 `createBrowserRouter` 创建路由对象
+	- 第一个参数为路由列表
+	- 第二个参数为配置，有 basename 等
+- `path` 属性表示路由, `element` 属性表示组件，可以是任何 JSX
+- 使用 `<Link />` 组件进行路由跳转
+
+#### 9.3 替换入口
+
+将入口文件 `main.tsx` 中引用的最外层组件替换为 `<RouterProvider />`, `router` 属性设置为上面声明的 `router` 对象。
+
+```tsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from "react-router-dom";
+import router from './routers';
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+)
+```
+
+### 10. 引入 Ant Design
+
+#### 10.1 安装依赖
+
+时间相关的组件要用到 dayjs, 顺便一起安装了。
+
+```shell
+pnpm add antd dayjs
+```
+
+#### 10.2 国际化
+
+AntD 的默认语言是英文，要切换为中文时需要进行国际化配置。
+
+在入口组件的最外层嵌套 `ConfigProvider`, 添加 locale 配置:
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+import { ConfigProvider } from "antd";
+import zhCN from "antd/locale/zh_CN";
+import router from "./routers";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ConfigProvider locale={zhCN}>
+      <RouterProvider router={router} />
+    </ConfigProvider>
+  </React.StrictMode>
+);
+```
+
+放到路由容器外层的原因是路由容器组件中也可能会用到 Antd组件（例如弹窗）。
+
+#### 10.3 配置主题
+
+AntD V5 采用了 DesignToken 设计，配置主题非常简单。
+
+上面在国际化中已经引入了 `ConfigProvider` 组件，这一步中使用它来修改主题色，给入口文件的 ConfigProvider 添加 theme 属性：
+
+```tsx
+// main.tsx
+<ConfigProvider
+  theme={{
+    token: {
+      colorPrimary: "#ff4a4a",
+    },
+  }}
+>
+```
+
+`token.colorPrimary` 即为整个系统的主题色。如果要修改其他属性，请查看 [官方文档](https://ant.design/docs/react/customize-theme-cn)。
+
+#### 10.4 规避 tailwind 的样式覆盖
+
+tailwind 的基础类中对标签默认样式进行了重置，会影响 AntD 组件的基础样式，所以我们需要把入口中的基础类引用去掉：
+
+```css
+/* @tailwind base; */  // 干掉这一行
+@tailwind components;
+@tailwind utilities;
+```
+
+### 11. 添加自动化测试支持
+
+#### 11.1 安装 jest
+
+```shell
+pnpm add jest @types/jest @jest/types
+```
+
+#### 11.2 初始化 jest 配置文件
+
+```shell
+npx jest --init
+```
+
+按照下面的示例依次选择：
+- add running test script —— yes
+- use TypeScript —— yes
+- test environment —— jsdom(browser-like)
+- add coverage reports —— no
+- provider -- babel
+- clear -- yes
+
+完成选择后，将会在根目录初始化 `jest.config.ts` 文件。
+
+#### 11.3 配置 babel
+
+由于在 proivder 项选择了 babel，所以需要安装 babel 相关依赖：
+
+```shell
+pnpm add babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript -D
+```
+
+然后新增 `babel.config.cjs` 文件：
+
+```js
+// ./babel.config.cjs
+module.exports = {
+  presets: [
+    ["@babel/preset-env", { targets: { node: "current" } }],
+    ["@babel/preset-react",{ runtime: "automatic" }], // 自动导入react
+    "@babel/preset-typescript",
+  ],
+};
+```
+
+文件后缀为 `.cjs` 是因为 `package.json` 中的 `type` 为 `"module"`
+
+#### 11.4 安装附加依赖
+
+根据以上的配置，还需要安装以下依赖：
+
+```shell
+pnpm add ts-node jest-environment-jsdom -D
+```
+
+原因：
+
+- jest 在编译 ts 时使用了 ts-node 进行编译
+- 初始化配置时 test enviroment 选择了 jsdom, 所以 jest-environment-jsdom 需要手动安装
+
+#### 11.5 特殊文件格式支持
+
+`jest.config.ts` 中添加如下内容：
+
+```ts
+export default {
+  transform: {
+		// 声明额外扩展名识别转换器：jest 不知道如何加载除 js/jsx 之外的其他扩展名
+    "^.+.(js|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+		// mock 自定义 svg 转换
+		"^.+.svg$": "<rootDir>/scripts/svg-transform.js",
+  },
+};
+```
+
+其中，引用的 `scripts/svg-transform.js` 文件内容如下：
+
+```js
+export default {
+  process() {
+    return { code: "module.exports = {};" };
+  },
+  getCacheKey() {
+    return "svgTransform"; // SVG固定返回这个字符串
+  },
+};
+```
+
+#### 11.6 CSS 代理
+
+先安装代理库：
+
+```shell
+pnpm add identity-obj-proxy
+```
+
+在 jest.config.ts 中添加如下配置：
+
+```ts
+export default {
+  moduleNameMapper: {
+		// 告诉 Jest 将此对象模拟为导入的 CSS 模块
+    "\.(css|less)$": "identity-obj-proxy"
+  }
+};
+```
+
+### 12. 配置 React Testing Library
+
+#### 12.1 安装相关依赖
+
+```shell
+pnpm add @testing-library/jest-dom @testing-library/react @testing-library/user-event -D
+```
+
+#### 12.2 全局导入 `@testing-library/jest-dom`
+
+在 jest.config.ts 中添加如下依赖：
+
+```ts
+export default {
+  // ... other config
+  setupFilesAfterEnv: ["<rootDir>/scripts/jest-dom-setup.js"],
+};
+```
+
+新建 `scripts/jest-dom-setup.js` 文件，填入如下内容：
+
+```js
+import '@testing-library/jest-dom'
+```
+
+#### 第一个测试用例
+
+新建 `src/App.test.tsx`, 填入以下内容：
+
+```tsx
+// 这里文件后缀修改为 tsx，因为需要测试 dom
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App";
+
+describe("test", () => {
+  test("first unit test", () => {
+    render(<App />);
+    expect(screen.getByText("Vite + React")).toBeInTheDocument();
+  });
+});
+```
+
+### 13. 引入 ahooks
+
+为了能够做到开箱即用，引入 ahooks 提供大量的常用 hooks，如 `useRequest`。
+
+```shell
+pnpm add ahooks
+```
