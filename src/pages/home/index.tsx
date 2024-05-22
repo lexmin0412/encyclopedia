@@ -46,36 +46,38 @@ function Home() {
             onChange={handleChange}
           />
         </div>
-        <div className="mt-6 flex items-center flex-wrap flex-1 overflow-auto">
-          {data.map((item) => {
-            return (
-              <a
-                className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
-                target="_blank"
-                href={item.website || item.github}
-              >
-                <div
-                  className={`h-12 w-12 rounded-[50%] text-center flex items-center  justify-center text-white ${getRandomClass()}`}
+        <div className="mt-6 overflow-auto">
+          <div className="w-full flex flex-wrap flex-1">
+            {data.map((item) => {
+              return (
+                <a
+                  className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
+                  target="_blank"
+                  href={item.website || item.github}
                 >
-                  {item.name.slice(0, 1)}
-                </div>
-                <div className="ml-3 overflow-hidden flex-1">
                   <div
-                    title={item.name}
-                    className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
+                    className={`h-12 w-12 rounded-[50%] text-center flex items-center  justify-center text-white ${getRandomClass()}`}
                   >
-                    {item.name}
+                    {item.name.slice(0, 1)}
                   </div>
-                  <div
-                    title={item.description}
-                    className="text-gray-500 mt-2 text-sm overflow-hidden whitespace-nowrap text-ellipsis"
-                  >
-                    {item.description}
+                  <div className="ml-3 overflow-hidden flex-1">
+                    <div
+                      title={item.name}
+                      className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
+                    >
+                      {item.name}
+                    </div>
+                    <div
+                      title={item.description}
+                      className="text-gray-500 mt-2 text-sm overflow-hidden whitespace-nowrap text-ellipsis"
+                    >
+                      {item.description}
+                    </div>
                   </div>
-                </div>
-              </a>
-            );
-          })}
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
