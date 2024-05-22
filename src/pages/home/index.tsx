@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {dataList} from "./data";
+import githubIcon from './../../assets/github.svg'
 
 const getRandomClass = () => {
   const classList = [
@@ -38,13 +39,20 @@ function Home() {
         </a>
       </div>
       <div className="flex-1 h-full pt-6 px-6 flex flex-col">
-        <div>
+        <div className="flex justify-between pr-[4%]">
           <input
             className="outline-none h-10 leading-10 inline-block bg-[#f6f7fa] w-96 rounded-3xl px-4"
             type="search"
             placeholder="搜索"
             onChange={handleChange}
           />
+					<a href="https://github.com/lexmin0412/encyclopedia"
+						target='_blank'
+					>
+						<img src={githubIcon} alt="github"
+							className="h-10 w-10 cursor-pointer"
+						/>
+					</a>
         </div>
         <div className="mt-6 overflow-auto">
           <div className="w-full flex flex-wrap flex-1">
