@@ -107,6 +107,7 @@ function Home() {
                     </a>
                   );
 								}
+								if (currentTabData.type == 'article') {
 								return (
                   <a
                     className="bg-white border w-[30%] mr-[3%] rounded-xl mb-5 cursor-pointer  hover:transition-all overflow-hidden"
@@ -119,6 +120,19 @@ function Home() {
                     <div className="text-sm text-gray-600 px-3 w-full h-10 leading-5 mb-2 ellipsis-2">
                       {item.description}
                     </div>
+                  </a>
+                );
+								}
+								return (
+                  <a
+                    className="bg-white w-[30%] mr-[3%] mb-5 cursor-pointer  hover:transition-all overflow-hidden h-5 leading-5 pl-3 flex items-center"
+                    href={item.url}
+                    target="_blank"
+                  >
+                    <i
+                      className={`w-1 inline-block h-full ${item.themeColor}`}
+                    />
+                    <span className="ml-3">{item.title}</span>
                   </a>
                 );
                 })

@@ -10,7 +10,7 @@ interface GroupItem {
 	id: string
 	title: string
 	themeColor: string
-	type: 'tool' | 'article'
+	type: 'tool' | 'article' | 'website' | 'music' | 'movie'
 	children: DataItem[]
 }
 
@@ -450,6 +450,12 @@ export const dataList: GroupItem[] = [
 				"description": "Sketch设计稿智能解析平台"
 			},
 			{
+				title: 'Logan',
+				description: '美团开源移动端基础日志库',
+				github: 'https://github.com/Meituan-Dianping/Logan',
+				url: 'https://tech.meituan.com/2018/10/11/logan-open-source.html',
+			},
+			{
 				"title": "Rust",
 				"github": "https://github.com/rust-lang/rust",
 				"url": "https://www.rust-lang.org",
@@ -487,8 +493,135 @@ export const dataList: GroupItem[] = [
 			{ "title": "配送交付时间轻量级预估实践", "url": "https://tech.meituan.com/2019/10/10/distribution-time-prediction-practice.html", description: '' },
 			{ "title": "移动端H5开发常用技巧", "url": "https://juejin.im/post/5e4a0162f265da57133b2005", description: '' },
 			{ "title": "语义化版本 2.0.0", "url": "https://semver.org/lang/zh-CN/", description: '' },
-			{ "title": "如何维护更新日志", "url": "https://keepachangelog.com/zh-CN/1.0.0/", description: '' }
+			{ "title": "如何维护更新日志", "url": "https://keepachangelog.com/zh-CN/1.0.0/", description: '' },
 		].map((item)=>{
+			return {
+				...item,
+				themeColor: getRandomClass()
+			}
+		})
+	},
+	{
+		id: 'website',
+		title: '博客站点',
+		type: 'website',
+		themeColor: getRandomClass(),
+		children: [
+			{
+				title: '美团技术团队',
+				description: '美团技术团队（Tech Team，简称 TT）是一支专注于解决技术问题的技术团队',
+				url: 'https://tech.meituan.com/'
+			},
+			{
+				title: '有赞技术团队',
+				description: '',
+				url: 'https://tech.youzan.com/'
+			},
+			{
+				title: '京东 - 凹凸实验室',
+				description: '凹凸实验室（Aotu.io）成立于 2013 年，致力于打造一个面向京东的开源技术平台。',
+				url: 'https://aotu.io/'
+			},
+			{
+				title: '知乎 - 前端技术漫游指南',
+				description: '前端技术漫游指南',
+				url: 'https://zhuanlan.zhihu.com/front-end'
+			}
+		].map((item)=>{
+			return {
+				...item,
+				themeColor: getRandomClass()
+			}
+		})
+	},
+	{
+		id: 'open-platform',
+		title: '开放平台',
+		type: 'website',
+		themeColor: getRandomClass(),
+		children: [
+			{
+				title: '微信官方文档',
+				description: '',
+				url: 'https://developers.weixin.qq.com/doc/'
+			},
+			{
+				title: '微信开放平台',
+				description: '',
+				url: 'https://open.weixin.qq.com/'
+			},
+			{
+				title: '支付宝开放平台',
+				description: '',
+				url: 'https://open.alipay.com/'
+			},
+			{
+				title: '抖音开放平台',
+				description: '',
+				url: 'https://developer.open-douyin.com/'
+			},
+			{
+				title: 'VSCode 扩展 API 文档',
+				description: '',
+				url: 'https://code.visualstudio.com/api'
+			},
+			{
+				title: '腾讯位置服务',
+				description: '',
+				url: 'https://lbs.qq.com/'
+			}
+		].map((item)=>{
+			return {
+				...item,
+				themeColor: getRandomClass()
+			}
+		})
+	},
+	{
+		id: 'music',
+		title: '音乐',
+		type: 'music',
+		themeColor: getRandomClass(),
+		children: [
+			{
+				"title": "清风徐来",
+				"description": "清风徐来 by 王菲",
+				"url": "https://c.y.qq.com/base/fcgi-bin/u?__=r9qTO9"
+			},
+			{
+				"title": "老街",
+				"description": "老街 by 李荣浩",
+				"url": "https://c.y.qq.com/base/fcgi-bin/u?__=g3StU"
+			},
+			{
+				"title": "篝火旁",
+				"description": "篝火旁 by 吕大叶 /马子林Broma /陈觅Lynne",
+				"url": "https://y.qq.com/n/ryqq/songDetail/214093439"
+			},
+			{
+				"title": "漠河舞厅",
+				"description": "漠河舞厅 by 周冬雨 /刘昊然 /梅婷 /袁弘",
+				"url": "https://y.qq.com/n/ryqq/songDetail/333192479"
+			}
+		].map((item) => {
+			return {
+				...item,
+				themeColor: getRandomClass()
+			}
+		})
+	},
+	{
+		id: 'movie',
+		title: '电影',
+		type: 'movie',
+		themeColor: getRandomClass(),
+		children: [
+			{
+				"title": "海上钢琴师",
+				description: "本片讲述了一个钢琴天才传奇的一生。1900年，Virginian号豪华邮轮上，一个孤儿被遗弃在头等舱，由船上的水手抚养长大，取名1900。1900慢慢长大，显示出了无师自通的非凡钢琴天赋，在船上的乐队表演钢琴，每个听过他演奏的人，都被深深打动。爵士乐鼻祖杰尼听说了1900的高超技艺，专门上船和他比赛，最后自叹弗如，黯然离去。可惜，这一切的事情都发生在海上，1900从来不愿踏上陆地，直到有一天，他爱上了一个女孩，情愫在琴键上流淌。他会不会为了爱情，踏上陆地开始新的生活，用他的琴声惊艳世界？他将怎样谱写自己非凡的人生。",
+				"url": "https://m.v.qq.com/play.html?vid=n0033qgxnhc"
+			}
+		].map((item) => {
 			return {
 				...item,
 				themeColor: getRandomClass()
