@@ -1,32 +1,32 @@
 import {useState} from "react";
 import {dataList} from "./data";
-import githubIcon from './../../assets/github.svg'
-
-const getRandomClass = () => {
-  const classList = [
-    "bg-red-500",
-    "bg-green-500",
-    "bg-blue-500",
-    "bg-yellow-500",
-    "bg-pink-500",
-    "bg-purple-500",
-    "bg-indigo-500",
-    "bg-orange-500",
-  ];
-  return classList[Math.floor(Math.random() * 8)];
-};
+import githubIcon from "./../../assets/github.svg";
 
 function Home() {
+  const [currentTab, setCurrentTab] = useState("tool");
   const [data, setData] = useState(dataList);
 
   const handleChange = (e: any) => {
     setData(
-      dataList.filter((item) => {
-				const searchText = e.target.value;
-        return item.name.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText);
+      dataList.map((item) => {
+        if (currentTab === item.id) {
+          return {
+            ...item,
+            children: item.children.filter((item) => {
+              const searchText = e.target.value;
+              return (
+                item.title.toLowerCase().includes(searchText) ||
+                item.description.toLowerCase().includes(searchText)
+              );
+            }),
+          };
+        }
+        return item;
       })
     );
   };
+
+  const currentTabData = data.find((item) => item.id === currentTab)
 
   return (
     <div className="w-full h-screen flex items-center">
@@ -37,8 +37,28 @@ function Home() {
         >
           Encyclopedia
         </a>
+
+        <div className="pt-8">
+          {dataList.map((group) => {
+            const isCurrentTab = group.id === currentTab;
+            return (
+              <div
+                key={group.id}
+                className={`flex items-center h-12 mb-3 px-2 hover:bg-white cursor-pointer rounded-xl ${isCurrentTab ? "bg-white" : ""}`}
+                onClick={() => setCurrentTab(group.id)}
+              >
+                <div
+                  className={`w-8 h-8 rounded-[50%] flex items-center justify-center text-white ${group.themeColor}`}
+                >
+                  {group.title.slice(0, 1)}
+                </div>
+                <div className="ml-3">{group.title}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div className="flex-1 h-full pt-6 px-6 flex flex-col">
+      <div className="flex-1 h-full pt-6 px-6 flex flex-col overflow-hidden">
         <div className="flex justify-between pr-[4%]">
           <input
             className="outline-none h-10 leading-10 inline-block bg-[#f6f7fa] w-96 rounded-3xl px-4"
@@ -46,45 +66,63 @@ function Home() {
             placeholder="搜索"
             onChange={handleChange}
           />
-					<a href="https://github.com/lexmin0412/encyclopedia"
-						target='_blank'
-					>
-						<img src={githubIcon} alt="github"
-							className="h-10 w-10 cursor-pointer"
-						/>
-					</a>
+          <a href="https://github.com/lexmin0412/encyclopedia" target="_blank">
+            <img
+              src={githubIcon}
+              alt="github"
+              className="h-10 w-10 cursor-pointer"
+            />
+          </a>
         </div>
         <div className="mt-6 overflow-auto">
           <div className="w-full flex flex-wrap flex-1">
-            {data.map((item) => {
-              return (
-                <a
-                  className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
-                  target="_blank"
-                  href={item.website || item.github}
-                >
-                  <div
-                    className={`h-12 w-12 rounded-[50%] text-center flex items-center  justify-center text-white ${getRandomClass()}`}
+            {currentTabData?.children?.length
+              ? currentTabData.children.map((item) => {
+								if (currentTabData.type === 'tool') {
+                  return (
+                    <a
+                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
+                      target="_blank"
+                      href={item.url || item.github}
+                    >
+                      <div
+                        className={`h-12 w-12 rounded-[50%] text-center flex items-center  justify-center text-white ${item.themeColor}`}
+                      >
+                        {item.title.slice(0, 1)}
+                      </div>
+                      <div className="ml-3 overflow-hidden flex-1">
+                        <div
+                          title={item.title}
+                          className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
+                        >
+                          {item.title}
+                        </div>
+                        <div
+                          title={item.description}
+                          className="text-gray-500 mt-2 text-sm overflow-hidden whitespace-nowrap text-ellipsis"
+                        >
+                          {item.description}
+                        </div>
+                      </div>
+                    </a>
+                  );
+								}
+								return (
+                  <a
+                    className="bg-white border w-[30%] mr-[3%] rounded-xl mb-5 cursor-pointer  hover:transition-all overflow-hidden"
+                    href={item.url}
+                    target="_blank"
                   >
-                    {item.name.slice(0, 1)}
-                  </div>
-                  <div className="ml-3 overflow-hidden flex-1">
-                    <div
-                      title={item.name}
-                      className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
-                    >
-                      {item.name}
+                    <div className="h-10 leading-10 px-3 overflow-hidden  text-ellipsis whitespace-nowrap">
+                      {item.title}
                     </div>
-                    <div
-                      title={item.description}
-                      className="text-gray-500 mt-2 text-sm overflow-hidden whitespace-nowrap text-ellipsis"
-                    >
+                    <div className="text-sm text-gray-600 px-3 w-full h-10 leading-5 mb-2 ellipsis-2">
                       {item.description}
                     </div>
-                  </div>
-                </a>
-              );
-            })}
+                  </a>
+                );
+                })
+              : <div>当前分类下暂无数据</div>}
           </div>
         </div>
       </div>
