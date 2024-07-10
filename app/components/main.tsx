@@ -1,6 +1,9 @@
+'use client'
+
 import {useState} from "react";
 import {dataList} from "./data";
 import githubIcon from "./../../assets/github.svg";
+import Image from "next/image";
 
 function Home() {
   const [currentTab, setCurrentTab] = useState("tool");
@@ -67,7 +70,7 @@ function Home() {
             onChange={handleChange}
           />
           <a href="https://github.com/lexmin0412/encyclopedia" target="_blank">
-            <img
+            <Image
               src={githubIcon}
               alt="github"
               className="h-10 w-10 cursor-pointer"
