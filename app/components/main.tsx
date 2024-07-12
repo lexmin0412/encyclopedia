@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { dataList } from "./data";
-import githubIcon from "./../../assets/github.svg";
+import githubIcon from "@/assets/github.svg";
 import Image from "next/image";
 
 function Home() {
