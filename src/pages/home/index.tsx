@@ -81,7 +81,7 @@ function Home() {
 								if (currentTabData.type === 'tool') {
                   return (
                     <a
-                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
+                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4 rounded-xl flex items-center mb-5 cursor-pointer hover:transition-all hover:scale-105"
                       target="_blank"
                       href={item.url || item.github}
                     >
@@ -91,11 +91,21 @@ function Home() {
                         {item.title.slice(0, 1)}
                       </div>
                       <div className="ml-3 overflow-hidden flex-1">
-                        <div
-                          title={item.title}
-                          className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
-                        >
-                          {item.title}
+                        <div title={item.title} className="flex items-center overflow-hidden">
+                          <span className="text-lg overflow-hidden whitespace-nowrap text-ellipsis">
+                            {item.title}
+                          </span>
+                          <div className="flex items-center ml-2">
+														{
+															item.tags?.map((tag)=>{
+																return (
+																	<span key={`${item.title}_${tag}`}
+																		className='text-sm border rounded px-2 text-gray-600'
+																	>{tag}</span>
+																)
+															})
+														}
+													</div>
                         </div>
                         <div
                           title={item.description}

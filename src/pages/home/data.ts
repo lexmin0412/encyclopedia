@@ -4,6 +4,7 @@ interface DataItem {
 	url: string
 	description: string
 	themeColor?: string
+	tags?: string[]
 }
 
 interface GroupItem {
@@ -39,7 +40,10 @@ export const dataList: GroupItem[] = [
 				"title": "MarsCode",
 				// "github": "https://github.com/facebook/react",
 				"url": "https://www.marscode.cn/",
-				"description": "豆包旗下的 AI 原生 IDE，支持智能补全、智能预测、智能问答等能力。同时提供云端开发环境，一键开箱即用"
+				"description": "豆包旗下的 AI 原生 IDE，支持智能补全、智能预测、智能问答等能力。同时提供云端开发环境，一键开箱即用",
+				tags: [
+					'AI',
+				]
 			},
 			{
 				"title": "React",
