@@ -1,6 +1,9 @@
-import {useState} from "react";
-import {dataList} from "./data";
-import githubIcon from "./../../assets/github.svg";
+'use client'
+
+import { useState } from "react";
+import { dataList } from "./data";
+import githubIcon from "@/assets/github.svg";
+import Image from "next/image";
 
 function Home() {
   const [currentTab, setCurrentTab] = useState("tool");
@@ -67,7 +70,7 @@ function Home() {
             onChange={handleChange}
           />
           <a href="https://github.com/lexmin0412/encyclopedia" target="_blank">
-            <img
+            <Image
               src={githubIcon}
               alt="github"
               className="h-10 w-10 cursor-pointer"
@@ -78,10 +81,11 @@ function Home() {
           <div className="w-full flex flex-wrap flex-1">
             {currentTabData?.children?.length
               ? currentTabData.children.map((item) => {
-								if (currentTabData.type === 'tool') {
+                if (currentTabData.type === 'tool') {
                   return (
                     <a
-                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4 rounded-xl flex items-center mb-5 cursor-pointer hover:transition-all hover:scale-105"
+                      key={item.title}
+                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
                       target="_blank"
                       href={item.url || item.github}
                     >
@@ -116,25 +120,27 @@ function Home() {
                       </div>
                     </a>
                   );
-								}
-								if (currentTabData.type == 'article') {
-								return (
+                }
+                if (currentTabData.type == 'article') {
+                  return (
+                    <a
+                      key={item.title}
+                      className="bg-white border w-[30%] mr-[3%] rounded-xl mb-5 cursor-pointer  hover:transition-all overflow-hidden"
+                      href={item.url}
+                      target="_blank"
+                    >
+                      <div className="h-10 leading-10 px-3 overflow-hidden  text-ellipsis whitespace-nowrap">
+                        {item.title}
+                      </div>
+                      <div className="text-sm text-gray-600 px-3 w-full h-10 leading-5 mb-2 ellipsis-2">
+                        {item.description}
+                      </div>
+                    </a>
+                  );
+                }
+                return (
                   <a
-                    className="bg-white border w-[30%] mr-[3%] rounded-xl mb-5 cursor-pointer  hover:transition-all overflow-hidden"
-                    href={item.url}
-                    target="_blank"
-                  >
-                    <div className="h-10 leading-10 px-3 overflow-hidden  text-ellipsis whitespace-nowrap">
-                      {item.title}
-                    </div>
-                    <div className="text-sm text-gray-600 px-3 w-full h-10 leading-5 mb-2 ellipsis-2">
-                      {item.description}
-                    </div>
-                  </a>
-                );
-								}
-								return (
-                  <a
+                    key={item.title}
                     className="bg-white w-[30%] mr-[3%] mb-5 cursor-pointer  hover:transition-all overflow-hidden h-5 leading-5 pl-3 flex items-center"
                     href={item.url}
                     target="_blank"
@@ -145,7 +151,7 @@ function Home() {
                     <span className="ml-3">{item.title}</span>
                   </a>
                 );
-                })
+              })
               : <div>当前分类下暂无数据</div>}
           </div>
         </div>
