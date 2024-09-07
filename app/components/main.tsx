@@ -65,8 +65,8 @@ function Home() {
           })}
         </div>
       </div>
-      <div className="flex-1 h-full pt-6 px-6 flex flex-col overflow-hidden">
-        <div className="flex justify-between pr-[4%]">
+      <div className="flex-1 h-full pt-6 flex flex-col overflow-hidden">
+        <div className="flex justify-between pr-[4%] px-6">
           <input
             className="outline-none h-10 leading-10 inline-block bg-[#f6f7fa] w-96 rounded-3xl px-4"
             type="search"
@@ -81,7 +81,7 @@ function Home() {
             />
           </a>
         </div>
-        <div className="mt-6 overflow-auto">
+        <div className="mt-6 overflow-auto px-6">
           <div className="w-full flex flex-wrap flex-1">
             {currentTabData?.children?.length ? (
               currentTabData.children.map((item) => {
