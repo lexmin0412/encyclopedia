@@ -1,9 +1,11 @@
-'use client'
+"use client";
 
-import { useState } from "react";
-import { dataList } from "./data";
+import {useState} from "react";
+import {dataList} from "./data";
 import githubIcon from "@/assets/github.svg";
 import Image from "next/image";
+import {ChromeOutlined, GithubOutlined, MoreOutlined} from "@ant-design/icons";
+import {Tooltip} from "antd";
 
 function Home() {
   const [currentTab, setCurrentTab] = useState("tool");
@@ -29,7 +31,7 @@ function Home() {
     );
   };
 
-  const currentTabData = data.find((item) => item.id === currentTab)
+  const currentTabData = data.find((item) => item.id === currentTab);
 
   return (
     <div className="w-full h-screen flex items-center">
@@ -47,7 +49,9 @@ function Home() {
             return (
               <div
                 key={group.id}
-                className={`flex items-center h-12 mb-3 px-2 hover:bg-white cursor-pointer rounded-xl ${isCurrentTab ? "bg-white" : ""}`}
+                className={`flex items-center h-12 mb-3 px-2 hover:bg-white cursor-pointer rounded-xl ${
+                  isCurrentTab ? "bg-white" : ""
+                }`}
                 onClick={() => setCurrentTab(group.id)}
               >
                 <div
@@ -79,15 +83,13 @@ function Home() {
         </div>
         <div className="mt-6 overflow-auto">
           <div className="w-full flex flex-wrap flex-1">
-            {currentTabData?.children?.length
-              ? currentTabData.children.map((item) => {
-                if (currentTabData.type === 'tool') {
+            {currentTabData?.children?.length ? (
+              currentTabData.children.map((item) => {
+                if (currentTabData.type === "tool") {
                   return (
-                    <a
+                    <div
                       key={item.title}
-                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-center mb-5 cursor-pointer  hover:transition-all hover:scale-105"
-                      target="_blank"
-                      href={item.url || item.github}
+                      className="bg-white shadow-xl w-[30%] mr-[3%] p-4  rounded-xl flex items-start mb-5  hover:transition-all hover:scale-105"
                     >
                       <div
                         className={`h-12 w-12 rounded-[50%] text-center flex items-center  justify-center text-white ${item.themeColor}`}
@@ -95,21 +97,30 @@ function Home() {
                         {item.title.slice(0, 1)}
                       </div>
                       <div className="ml-3 overflow-hidden flex-1">
-                        <div title={item.title} className="flex items-center overflow-hidden">
-                          <span className="text-lg overflow-hidden whitespace-nowrap text-ellipsis">
-                            {item.title}
-                          </span>
-                          <div className="flex items-center ml-2">
-														{
-															item.tags?.map((tag)=>{
-																return (
-																	<span key={`${item.title}_${tag}`}
-																		className='text-sm border rounded px-2 text-gray-600'
-																	>{tag}</span>
-																)
-															})
-														}
-													</div>
+                        <div className="flex items-center overflow-hidden">
+                          <div className="flex-1 flex items-center overflow-hidden">
+                            <span
+                              className="text-lg overflow-hidden whitespace-nowrap text-ellipsis"
+                              title={item.title}
+                            >
+                              {item.title}
+                            </span>
+                            <div className="flex items-center ml-2">
+                              {item.tags?.map((tag) => {
+                                return (
+                                  <span
+                                    key={`${item.title}_${tag}`}
+                                    className="text-sm border rounded px-2 text-gray-600"
+                                  >
+                                    {tag}
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          </div>
+                          <div className="pl-2">
+                            <MoreOutlined />
+                          </div>
                         </div>
                         <div
                           title={item.description}
@@ -117,11 +128,37 @@ function Home() {
                         >
                           {item.description}
                         </div>
+                        <div className="mt-2 text-slate-700">
+                          {item.url && (
+                            <Tooltip title="点我访问官方文档">
+                              <a
+                                title={item.url}
+                                href={item.url}
+                                target="_blank"
+                                className="mr-2 hover:text-black"
+                              >
+                                <ChromeOutlined />
+                              </a>
+                            </Tooltip>
+                          )}
+                          {item.github && (
+                            <Tooltip title="点我访问 Github">
+                              <a
+                                href={item.github}
+                                title={item.github}
+                                target="_blank"
+                                className="mr-2 hover:text-black"
+                              >
+                                <GithubOutlined />
+                              </a>
+                            </Tooltip>
+                          )}
+                        </div>
                       </div>
-                    </a>
+                    </div>
                   );
                 }
-                if (currentTabData.type == 'article') {
+                if (currentTabData.type == "article") {
                   return (
                     <a
                       key={item.title}
@@ -152,7 +189,9 @@ function Home() {
                   </a>
                 );
               })
-              : <div>当前分类下暂无数据</div>}
+            ) : (
+              <div>当前分类下暂无数据</div>
+            )}
           </div>
         </div>
       </div>
