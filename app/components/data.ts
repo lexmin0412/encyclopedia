@@ -101,8 +101,8 @@ export const dataList: GroupItem[] = [
 			},
 			{
 				"title": "Varlet",
-				"github": "https://github.com/haoziqaq/varlet",
-				"url": "https://varlet.gitee.io",
+				"github": "https://github.com/varletjs/varlet",
+				"url": "https://varletjs.org/#/zh-CN/index",
 				"description": "基于 Vue3 开发的 Material 风格移动端组件库"
 			},
 			{
