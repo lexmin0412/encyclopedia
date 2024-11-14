@@ -65,7 +65,7 @@ export const dataList: GroupItem[] = [
 			{
 				"title": "Ant Design",
 				"github": "https://github.com/ant-design/ant-design",
-				"url": "https://ant.design",
+				"url": "https://ant-design.antgroup.com/index-cn",
 				"description": "一套企业级 UI 设计语言和 React 组件库"
 			},
 			{
