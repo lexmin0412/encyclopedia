@@ -481,6 +481,12 @@ export const dataList: GroupItem[] = [
 				"github": "https://github.com/golang/go",
 				"url": "https://golang.org",
 				"description": "一门可以提高程序员的工作效率的编程语言"
+			},
+			{
+				title: 'Tailwind CSS',
+				github: 'https://github.com/tailwindlabs/tailwindcss',
+				url: 'https://tailwindcss.com/',
+				description: '一个以实用为先、用于快速UI开发的CSS框架'
 			}
 		].map((item) => {
 			return {
